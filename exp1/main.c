@@ -4,6 +4,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "stdbool.h"
+#define CGLTF_IMPLEMENTATION
+#include "cgltf.h"
 
 // Vertex shader source - data flows through the GPU pipeline
 static const char* vertex_shader_source = 
