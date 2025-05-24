@@ -1,0 +1,2 @@
+CompileFlags: 
+  Add: ["-Ilib/SDL3/include"] 
