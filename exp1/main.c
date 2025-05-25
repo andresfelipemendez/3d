@@ -162,6 +162,18 @@ int SDL_main(int argc, char* argv[]) {
     // Main loop
     bool running = true;
     SDL_Event event;
+
+    cgltf_options options = {0};
+    cgltf_data* data = NULL;
+    cgltf_result result = cgltf_parse_file(&options, "assets/SimpleSkin.gltf", &data);
+    if (result == cgltf_result_success)
+    {
+        /* TODO make awesome stuff */
+        
+        printf("Loaded file SimpleSkin\n");
+        
+    }
+    
     
     while (running) {
         // Handle events
@@ -190,7 +202,7 @@ int SDL_main(int argc, char* argv[]) {
         // Swap buffers
         SDL_GL_SwapWindow(window);
     }
-    
+    cgltf_free(data);
     // Cleanup
     glDeleteVertexArrays(1, &VAO);
     glDeleteBuffers(1, &VBO);

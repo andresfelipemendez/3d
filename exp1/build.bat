@@ -18,7 +18,7 @@ set SDL_INCLUDE=lib\SDL3\include
 set SDL_LIB=lib\SDL3\lib\x64
 
 :: Compiler flags
-set CFLAGS=/nologo /O2 /W3 /MD /std:c11
+set CFLAGS=/nologo /O2 /W3 /MD /std:c11 /D_CRT_SECURE_NO_WARNINGS
 set INCLUDES=/I"%SDL_INCLUDE%"
 set LIBS="%SDL_LIB%\SDL3.lib"
 
